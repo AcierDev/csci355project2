@@ -1,0 +1,72 @@
+
+/* Container styling */
+.container {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #0059ad;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.783);
+    margin-bottom: 30px;
+}
+
+/* Search Bar */
+.MuiTextField-root {
+    margin: 20px auto;
+    display: block;
+    max-width: 600px;
+}
+
+/* Event Cards */
+.MuiCard-root {
+    margin: 15px;
+    background: linear-gradient(135deg, #0c24dc, #4d5ccdc0);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.MuiCard-root:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.MuiCardContent-root {
+    text-align: center;
+}
+
+.MuiTypography-h5 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.MuiTypography-subtitle1 {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.MuiTypography-body2 {
+    font-size: 0.9rem;
+}
+
+/* Grid Layout */
+.MuiGrid-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

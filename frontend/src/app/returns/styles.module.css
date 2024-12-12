@@ -1,0 +1,437 @@
+.container {
+  max-width: 800px;
+  margin: 100px auto 50px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.returnForm {
+  display: grid;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  font-weight: 500;
+  color: #333;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  border-color: #004aad;
+  outline: none;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 20px;
+}
+
+.radioGroup label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+}
+
+.submitBtn {
+  background-color: #004aad;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: #003380;
+}
+
+.backBtn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #004aad;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.backBtn:hover {
+  background-color: #003380;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 80px 20px;
+    padding: 20px;
+  }
+
+  .radioGroup {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Returns Section */
+.returnContainer {
+  padding: 50px;
+  text-align: center;
+  background-color: #f4f7f9;
+  min-height: 100vh;
+  padding-top: 120px;
+}
+
+.returnContainer h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #004aad;
+}
+
+.returnBoxes {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.returnBoxWithLabel {
+  flex: 1;
+  max-width: 450px;
+  min-width: 300px;
+}
+
+.returnLabel {
+  font-size: 1.3rem;
+  color: #004aad;
+  margin-bottom: 15px;
+}
+
+.returnBox,
+.returnStatusBox {
+  background-color: #fff;
+  border: 1px solid #9fa4a8;
+  border-radius: 10px;
+  padding: 25px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.returnBox:hover,
+.returnStatusBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #1048e1;
+  margin-bottom: 15px;
+}
+
+.faqText {
+  color: #666;
+  line-height: 1.6;
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  color: #1048e1;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.linkButton:hover {
+  color: #0036b3;
+}
+
+/* Status Form */
+.statusForm {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.statusResult {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e8f4ff;
+  border-radius: 5px;
+  color: #004aad;
+}
+
+/* Return Promise Section */
+.returnPromise {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1048e1;
+  color: white;
+  padding: 40px;
+  margin: 40px auto;
+  border-radius: 10px;
+  max-width: 1000px;
+}
+
+.textContent {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.returnPromise h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Return Period Section */
+.returnPeriod {
+  padding: 40px 20px;
+  text-align: left;
+  background-color: white;
+  margin: 30px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.returnPeriod h2 {
+  font-size: 2rem;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.returnPeriod ul {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.returnPeriod li {
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Return Form Section */
+.returnForm {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: #1048e1;
+}
+
+.submitBtn {
+  background-color: #1048e1;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: #0036b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .returnContainer {
+    padding: 100px 20px 40px;
+  }
+
+  .returnBoxWithLabel {
+    width: 100%;
+  }
+
+  .returnPromise {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .logo {
+    margin-top: 20px;
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.submitBtn,
+.cancelBtn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitBtn {
+  background-color: #1048e1;
+  color: white;
+}
+
+.submitBtn:hover {
+  background-color: #0036b3;
+  transform: translateY(-2px);
+}
+
+.cancelBtn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.cancelBtn:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+/* Add new form overlay styles */
+.formOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.formContainer {
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  animation: slideDown 0.3s ease-out;
+}
+
+.formContent {
+  padding: 25px;
+}
+
+.formHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+  color: #333;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Update responsive styles */
+@media (max-width: 768px) {
+  .formOverlay {
+    padding: 15px;
+  }
+
+  .formContainer {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,201 @@
+/* Contact Banner */
+.contactBanner {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/banner.jpg") no-repeat center center / cover;
+  color: #fff;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeInBanner 1.5s ease-in-out;
+}
+
+@keyframes fadeInBanner {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bannerContent h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: fadeInText 2s ease;
+}
+
+.bannerContent p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  animation: fadeInText 2s ease 0.5s;
+}
+
+/* Contact Form */
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.contactTitle {
+  font-size: 2.5rem;
+  color: #ffcb05;
+  margin-bottom: 20px;
+  animation: fadeInText 1s ease;
+}
+
+.contactForm {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+  animation: slideInUp 1.5s ease;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #004aad;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: #ffcb05;
+  outline: none;
+}
+
+.submitBtn {
+  background-color: #004aad;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.submitBtn:hover {
+  background-color: #ffcb05;
+  color: #004aad;
+}
+
+/* Locations */
+.locationsContainer {
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.locationsTitle {
+  font-size: 2rem;
+  color: #004aad;
+  margin-bottom: 20px;
+}
+
+.locations {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 220px;
+  height: 120px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+  transition: all 0.5s ease;
+  animation: fadeInCard 1s ease-in-out;
+}
+
+.card.active {
+  width: 100%;
+  height: 300px;
+  transform: scale(1.05);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.locationInfo {
+  font-size: 1.1rem;
+  padding: 15px;
+  color: #333;
+  background-color: #ffcb05;
+  border-radius: 8px;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: none;
+}
+
+.locationInfo.show {
+  display: block;
+  opacity: 1;
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

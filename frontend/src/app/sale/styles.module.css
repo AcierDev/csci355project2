@@ -1,0 +1,134 @@
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* Product Section */
+.productSection {
+  padding: 120px 50px 50px;
+  background-color: #f7f9fc;
+}
+
+.intro {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #003366;
+  color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  animation: fadeIn 2s ease;
+}
+
+.intro h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #ffcb05;
+  margin-bottom: 20px;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.productCard {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+.productCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.productCard h3 {
+  margin: 15px 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.quantityControls button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.addToCart {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: auto;
+  border: none;
+  cursor: pointer;
+}
+
+.addToCart i {
+  margin-right: 8px;
+}
+
+.addToCart:hover {
+  background-color: #ffcb05;
+  transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .productSection {
+    padding: 80px 20px 30px;
+  }
+
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+}

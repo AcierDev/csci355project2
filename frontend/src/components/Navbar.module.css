@@ -1,0 +1,149 @@
+.header {
+  background-color: #004aad;
+  padding: 20px 50px;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: slideDown 1.5s ease-in-out;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  position: relative;
+  animation: fadeInText 2s ease;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navLink {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navLink::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -5px;
+  left: 50%;
+  background-color: #ffcb05;
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+.navLink:hover::before {
+  width: 100%;
+  left: 0%;
+}
+
+.navLink:hover {
+  color: #ffcb05;
+  text-shadow: 0 0 8px #ffcb05;
+}
+
+.cart {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.cart:hover {
+  animation: bounce 1s infinite alternate;
+}
+
+.cartCount {
+  background-color: #ffcb05;
+  color: #333;
+  border-radius: 50%;
+  padding: 3px 8px;
+  font-size: 12px;
+  position: absolute;
+  top: -10px;
+  right: -15px;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #004aad;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  .navLink::before {
+    display: none;
+  }
+}

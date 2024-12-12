@@ -1,0 +1,157 @@
+/* Main Container */
+.eventsContainer {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Section */
+.header {
+  margin-top: 70px;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #003366;
+  color: #ffffff;
+}
+
+.header h1 {
+  font-size: 3rem;
+  color: #ffcb05;
+  animation: fadeIn 1.5s ease-in-out;
+  margin: 0 0 20px 0;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #f1f1f1;
+  margin: 0;
+}
+
+/* Zipcode Section */
+.zipcodeSection {
+  margin-bottom: 30px;
+  animation: slideIn 1.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.searchInput {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #1e90ff;
+  border-radius: 5px;
+  outline: none;
+  width: 300px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.searchInput:focus {
+  border-color: #ffcb05;
+}
+
+.searchButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background: #1e90ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.searchButton:hover {
+  background: #ffcb05;
+  transform: scale(1.05);
+}
+
+/* Event Grid */
+.eventGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.eventCard {
+  background: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eventCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.eventCard h2 {
+  font-size: 1.5rem;
+  color: #1e90ff;
+  margin-bottom: 10px;
+}
+
+.eventCard p {
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Messages */
+.message {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  color: #dc3545;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .zipcodeSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchInput {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+}

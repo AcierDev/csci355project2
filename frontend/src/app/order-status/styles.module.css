@@ -1,0 +1,122 @@
+/* Main Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+  padding: 120px 40px 40px;
+  border-radius: 5px;
+  background-color: #f4f7f9;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #004aad;
+  font-size: 2.5rem;
+}
+
+/* Button Styling */
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: #1048e1;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #3e69e0;
+  transform: translateY(-2px);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Form Control Styling */
+.formControl {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.formControl input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #333;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.formControl input:focus,
+.formControl input:valid {
+  outline: 0;
+  border-bottom-color: #1048e1;
+}
+
+.formControl label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.formControl label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.formControl input:focus + label span,
+.formControl input:valid + label span {
+  color: #1048e1;
+  transform: translateY(-30px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 100px 20px 40px;
+  }
+
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .formControl {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadeIn 0.5s ease-out;
+}

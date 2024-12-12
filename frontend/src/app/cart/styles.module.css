@@ -1,0 +1,155 @@
+/* Cart Container Styles */
+.cartContainer {
+  margin-top: 100px;
+  padding: 50px 20px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  animation: slideIn 1s ease-in-out;
+}
+
+.cartTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #004aad;
+  margin-bottom: 20px;
+}
+
+.cartItems {
+  display: block;
+}
+
+/* Individual Cart Item Styles */
+.cartItem {
+  display: flex;
+  align-items: center;
+  background-color: #f7f9fc;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cartItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cartItem img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.itemDetails {
+  flex-grow: 1;
+}
+
+.itemDetails h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+.itemDetails p {
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.itemQuantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.itemQuantity i {
+  cursor: pointer;
+  color: #007bff;
+}
+
+.trashIcon {
+  color: #ff5252;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* Cart Summary Styles */
+.cartSummary {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.cartSummary h2 {
+  font-size: 2rem;
+  color: #004aad;
+  margin-bottom: 20px;
+}
+
+.checkoutBtn {
+  background-color: #ffcb05;
+  color: #004aad;
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.checkoutBtn:hover {
+  background-color: #ff9800;
+  transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Empty Cart Message */
+.cartItems p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin: 30px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cartContainer {
+    margin-top: 80px;
+    padding: 30px 15px;
+  }
+
+  .cartItem {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cartItem img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .itemQuantity {
+    justify-content: center;
+  }
+
+  .trashIcon {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

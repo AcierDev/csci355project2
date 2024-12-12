@@ -1,0 +1,170 @@
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.85)),
+    url("/CS355 Project images/blue_themed_tech_background.png") no-repeat
+      center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.heroContent {
+  z-index: 1;
+}
+
+.heroContent h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: #fffa65;
+  animation: slideIn 2s ease-out forwards;
+}
+
+.heroContent p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin-top: 20px;
+  color: #f1f1f1;
+  opacity: 0;
+  animation: fadeIn 2s 1s ease-out forwards;
+}
+
+.ctaBtn {
+  background-color: #ff6f61;
+  color: white;
+  padding: 15px 45px;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  margin-top: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: pulseButton 3s infinite alternate;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.ctaBtn:hover {
+  background-color: #1e90ff;
+}
+
+/* Floating Tech Animations */
+.floatingTechAnimations {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.techIcon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 250, 101, 0.2);
+  border-radius: 50%;
+  animation: float 6s infinite;
+}
+
+#tech-icon1 {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+#tech-icon2 {
+  top: 40%;
+  right: 20%;
+  animation-delay: 2s;
+}
+
+#tech-icon3 {
+  bottom: 20%;
+  left: 40%;
+  animation-delay: 4s;
+}
+
+/* Border Section */
+.border {
+  background: rgb(63, 96, 146);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  font-size: 150%;
+  text-align: center;
+  height: 60px;
+}
+
+/* Animations */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulseButton {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    padding: 0 20px;
+  }
+
+  .ctaBtn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Add or update these styles */
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}

@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #eef6ff, #1e90ff);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004aad;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo h1 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 30px;
+    font-size: 1.1rem;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcb05;
+}
+
+/* Header Section */
+header {
+    margin-top: 70px;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #003366;
+    color: #ffffff;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #ffcb05;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+}
+
+/* Main Container */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Zipcode Input Section */
+.zipcode-section {
+    margin-bottom: 30px;
+    animation: slideIn 1.2s ease-in-out;
+}
+
+.zipcode-section input {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #1e90ff;
+    border-radius: 5px;
+    outline: none;
+    width: 300px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.zipcode-section input:focus {
+    border-color: #ffcb05;
+}
+
+.zipcode-section button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: #1e90ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.zipcode-section button:hover {
+    background: #ffcb05;
+    transform: scale(1.05);
+}
+
+/* Events Grid */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+/* Individual Event Card */
+.event-card {
+    background: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.event-card h2 {
+    font-size: 1.5rem;
+    color: #1e90ff;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Footer Section */
+footer {
+    background-color: #004aad;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #ffcb05;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,118 @@
+.faqContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+.faqHeader {
+  text-align: center;
+  padding: 100px 20px 20px;
+  background-color: #003366;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.faqHeader h1 {
+  font-size: 3.5rem;
+  color: #ffcb05;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.5s forwards;
+}
+
+.faq:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.faqTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  padding-right: 40px;
+}
+
+.faqText {
+  display: none;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  max-height: 0;
+  opacity: 0;
+}
+
+.faq.active .faqText {
+  display: block;
+  max-height: 500px;
+  opacity: 1;
+}
+
+.faqToggle {
+  background: none;
+  border: none;
+  color: #004aad;
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.faqToggle:hover {
+  transform: scale(1.1);
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faqHeader h1 {
+    font-size: 2.5rem;
+  }
+
+  .faqContainer {
+    padding: 30px 15px;
+  }
+
+  .faq {
+    padding: 15px;
+  }
+
+  .faqTitle {
+    font-size: 1.1rem;
+  }
+}

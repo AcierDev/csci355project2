@@ -1,0 +1,89 @@
+.border {
+  background: rgb(63, 96, 146);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  font-size: 150%;
+  text-align: center;
+  height: 60px;
+}
+
+.testimonialContainer {
+  background-color: #4883cf;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+  color: #fff;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 50px 80px;
+  max-width: 768px;
+  position: relative;
+}
+
+.faQuote {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 28px;
+  position: absolute;
+  top: 70px;
+}
+
+.faQuoteRight {
+  left: 40px;
+}
+
+.faQuoteLeft {
+  right: 40px;
+}
+
+.testimonial {
+  line-height: 28px;
+  text-align: justify;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userImage {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  object-fit: cover;
+}
+
+.userDetails {
+  margin-left: 10px;
+}
+
+.username {
+  margin: 0;
+}
+
+.progressBar {
+  background-color: #fff;
+  height: 4px;
+  width: 100%;
+  animation: grow 5s linear;
+  transform-origin: left;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonialContainer {
+    padding: 20px 30px;
+  }
+
+  .faQuote {
+    display: none;
+  }
+}
